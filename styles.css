@@ -74,6 +74,10 @@ h1 {
 
 @media screen and (max-width: 768px) {
 
+    .container {
+        max-width: 90%;
+    }
+
     .recipe-item {
         flex-wrap: wrap;
         flex-direction: column;
@@ -82,7 +86,8 @@ h1 {
     .recipe-item img {
         width: 100%;
         height: auto;
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
+        margin-right: 20px;  
     }
 
     .recipe-item h2 {
@@ -99,6 +104,6 @@ h1 {
 
     .recipe-item a {
         width: 100%;
-
+        text-align: center;
     }
 }
