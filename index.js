@@ -20,9 +20,14 @@ function displayRecipes(recipes) {
                 .join(", ")}        
         `;
 
+        recipeLinkEl = document.createElement("a");
+        recipeLinkEl.href = recipe.sourceUrl;
+        recipeLinkEl.innerText = 'View Recipe';
+
         recipeItemEl.appendChild(recipeImgEl);
         recipeItemEl.appendChild(recipeTitleEL);
         recipeItemEl.appendChild(recipeIngredientsEl);
+        recipeItemEl.appendChild(recipeLinkEl);
         recipeListEl.appendChild(recipeItemEl);
     })
 }
