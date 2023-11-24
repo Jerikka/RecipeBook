@@ -10,7 +10,19 @@ function displayRecipes(recipes) {
         recipeImgEl.src = recipe.image;
         recipeImgEl.alt = 'recipe image';
 
+        recipeTitleEL = document.createElement("h2");
+        recipeTitleEL.innerText = recipe.title;
+
+        recipeIngredientsEl = document.createElement("p");
+        recipeIngredientsEl.innerHTML = `
+            <strong>Ingredients:</strong> ${recipe.extendedIngredients
+                .map((ingredient) => ingredient.original)
+                .join(", ")}        
+        `;
+
         recipeItemEl.appendChild(recipeImgEl);
+        recipeItemEl.appendChild(recipeTitleEL);
+        recipeItemEl.appendChild(recipeIngredientsEl);
         recipeListEl.appendChild(recipeItemEl);
     })
 }
